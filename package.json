@@ -7,7 +7,7 @@
     "lint": "tslint *.ts src/**/*.ts test/**/*.ts -e '**/*.d.ts'",
     "transpile": "./node_modules/.bin/tsc -p .",
     "build": "npm run -s lint && npm run -s transpile",
-    "test": "npm run -s build && NODE_ENV=test ./node_modules/.bin/mocha ./test/**/*.js && node ./run.js",
+    "test": "npm run -s build && NODE_ENV=test ./node_modules/.bin/mocha ./test/**/*.js",
     "start": "npm run -s build && node ./run.js"
   },
   "author": "",
