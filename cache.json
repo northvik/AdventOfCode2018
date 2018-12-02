@@ -2,5 +2,9 @@
     "day1": {
         "partOne": 427,
         "partTwo": 341
+    },
+    "day2": {
+        "partOne": 6150,
+        "partTwo": "not solved"
     }
 }

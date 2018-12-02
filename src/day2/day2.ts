@@ -10,28 +10,18 @@ export class Day2 extends BaseDay implements IDay {
         let threes = 0;
 
         for (let value of input) {
-            this.twoLetters(value)?twos++:null
-            this.threeLetters(value)?threes++:null
+            if (value.length > 0) {
+                this.twoLetters(value)?twos++:null
+                this.threeLetters(value)?threes++:null
+            }
         }
 
         return twos * threes;
     }
 
     public solvePartTwo(input: InputArray): number {
-        let frequency = 0;
-        let frequencyHistory = [0]
-        while(true) {
-            for (let change of input) {
-                if (parseInt(change)){
-                    frequency = frequency + parseInt(change)
-                    if (frequencyHistory.indexOf(frequency) >= 0) {
-                        return frequency;
-                    }
-                    frequencyHistory.push(frequency)
-                }
-            }
-        }
-        return null;
+       
+        return input[0];
     }
 
     public twoLetters(input: string): boolean {
