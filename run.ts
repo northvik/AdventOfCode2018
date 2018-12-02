@@ -17,5 +17,5 @@ for (let i = 1; i <= Object.keys(constructors).length; i++) {
 // tslint:disable-next-line
     console.log('Day ' + i + ':');
 // tslint:disable-next-line
-    console.log('     Part 1: ' + Day.solvePartOne(list) + '\n     Part 2: NOT SOLVED' +Day.solvePartTwo(list));
+    console.log('     Part 1: ' + Day.solvePartOne(list) + '\n     Part 2: ' +Day.solvePartTwo(list));
 }
