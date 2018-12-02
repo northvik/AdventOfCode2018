@@ -3,7 +3,7 @@ import 'mocha';
 import { Day1 } from '../src/day1/day1';
 
 const day = new Day1();
-describe('Testing Millisecond 1', () => {
+describe('Testing Day 1', () => {
     describe('Part 1', () => {
 
         it('Should return 3 will passing \'+1-2+3+1\'', () => {

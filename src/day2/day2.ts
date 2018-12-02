@@ -19,9 +19,18 @@ export class Day2 extends BaseDay implements IDay {
         return twos * threes;
     }
 
-    public solvePartTwo(input: InputArray): number {
-       
-        return input[0];
+    public solvePartTwo(input: InputArray): string {
+        const sortInput = input.sort();
+        for (let index = 1; index < sortInput.length; index++) {
+            const diffPos = this.findFirstDiffPos(sortInput[index], sortInput[index - 1]);
+
+            const current = sortInput[index].substring(0, diffPos) + sortInput[index].substring(diffPos + 1, sortInput[index].length);
+            const previous = sortInput[index - 1].substring(0, diffPos) + sortInput[index - 1].substring(diffPos + 1, sortInput[index - 1].length);
+            if (current == previous) {
+                return current;
+            }
+        }
+        return null;
     }
 
     public twoLetters(input: string): boolean {
@@ -48,5 +57,14 @@ export class Day2 extends BaseDay implements IDay {
 
     private count(char: string, input: string): number {
             return (input.length - input.replace(new RegExp(char,"g"), '').length) / char.length;
+    }
+
+    private findFirstDiffPos(a: string, b: string): number {
+        var longerLength = Math.max(a.length, b.length);
+        for (var i = 0; i < longerLength; i++)
+        {
+            if (a[i] !== b[i]) return i;
+        }
+        return -1;
     }
 }

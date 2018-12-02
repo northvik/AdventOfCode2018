@@ -3,7 +3,7 @@ import 'mocha';
 import { Day2 } from '../src/day2/day2';
 
 const day = new Day2();
-describe('Testing Millisecond 1', () => {
+describe('Testing Day 2', () => {
     describe('Part 1', () => {
 
         describe('test two letter parsing', () => {
@@ -41,6 +41,8 @@ describe('Testing Millisecond 1', () => {
     });
 
     describe('Part 2', () => {
-
+        it('Should return \'fgij\' will passing \'abcde fghij klmno pqrst fguij axcye wvxyz\'', () => {
+            expect(day.solvePartTwo(['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye', 'wvxyz'])).to.equal('fgij');
+        });
     });
 });
