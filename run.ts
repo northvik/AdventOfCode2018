@@ -1,6 +1,6 @@
 import fs = require('fs-extra');
-import { Day1 } from './src/day1/day1';
-import { Day2 } from './src/day2/day2';
+import { Day1 } from './src/day1/main';
+import { Day2 } from './src/day2/main';
 
 let contents, Day, list;
 

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import 'mocha';
-import { Day1 } from '../src/day1/day1';
+import { Day1 } from '../src/day1/main';
 
 const day = new Day1();
 describe('Testing Day 1', () => {
